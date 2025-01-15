@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of DropInSound.
+ *
+ * DropInSound is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * DropInSound is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.  
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with DropInSound. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * config.inc
+ * 
+ * DropInSound configuration settings.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2021, 2024, 5 Mode     
+ */
+
+define('DEBUG', true);
+ 
+define('APP_NAME', "DropInSound");
+
+define('APP_TITLE', "DropInSound");
+define('APP_DESCRIPTION', "Welcome to DropInSound! Let everyone drop their own sound.");
+define('APP_KEYWORDS', "sound,logger,list,on-premise,solution");
+
+// password: yourpassword
+// salt: yoursalt
+define('APP_HASH', "");
+
+define('APP_SPLASH', true);
+
+define('APP_PATH', "/var/www/YourWebApp");
+define('APP_DATA_PATH', "/var/www/YourWebApp/data");
+define('APP_SALT', "yoursalt");
+// Default Locale, in two letters format
+define('APP_LOCALE', "EN");
+define('APP_CUSTOM_HEADER', "&nbsp;&nbsp;<a href='http://5mode.com'><img src='/DIS_res/5mode.png' style='width:950px;'></a>");
+// App uses: PRIVATE or BUSINESS
+define('APP_USE', "PRIVATE");
+// App context: EVENTS(0) or CALENDAR(1)
+define('APP_MODE', 0);
+define('APP_GUEST_MSG', "This is a private exerpt list, please login");
+define('APP_WELCOME_MSG', "your exerpt list:");
+// Max signs from a single client
+define('APP_MAX_FROM_IP', 5);
+// Default Context: 'PRIVATE' or 'PUBLIC'
+define('APP_DEFAULT_CONTEXT', "PUBLIC");
+define('APP_FILE_MAX_SIZE', 5996000);
+define('DISPLAY_SHOW_HEADER', true);
+define('DISPLAY_SHOW_DATETIME', true);
+define('DISPLAY_DATE_FONT', "Yuji Boku");
+define('DISPLAY_SUBMIT_BUTTON', "Log event");
+
+define('CMDLINE_VALIDCMDS', "~|sign|del|conf|refresh|");
+
+define('HISTORY_MAX_ITEMS', 1000);
+
+$CONFIG = [
+
+   'DEBUG' => true,
+
+   'APP' => [
+      'NAME' => "DropIn",
+      'TITLE' => "DropIn",
+      'DESCRIPTION' => "Welcome to DropIn! Let everyone drop their own stuff.",
+      'KEYWORDS' => "exerpt,logger,list,on-premise,solution",
+      // password: yourpassword
+      // salt: yoursalt
+      'HASH' => "",  
+      'PATH' => "/var/www/YourWebApp",
+      'DATA_PATH' => "/var/www/YourWebApp/data",
+      'SALT' => "yoursalt",
+      // Default Locale, in two letters format
+      'LOCALE' => "EN",
+      'CUSTOM_HEADER' => "&nbsp;&nbsp;<a href='http://5mode.com'><img src='/DI_res/5mode.png' style='width:950px;'></a>",
+      // App use: PRIVATE or BUSINESS
+      'USE' => "PRIVATE",
+      'GUEST_MSG' => "This is a private exerpt list, please login",
+      'WELCOME_MSG' => "your exerpt list:",
+      // Max signs from a single client
+      'MAX_FROM_IP' =>  5,
+      // Default Context: 'PRIVATE' or 'PUBLIC'
+      'DEFAULT_CONTEXT' => "PUBLIC",
+      'FILE_MAX_SIZE' => 5996000
+      ],
+    
+    'DISPLAY' => [
+      'SHOW_DATETIME' => true,    
+      'SHOW_HEADER' => true,
+      'NAME_FONT' => "Yuji Boku",
+      'SUBMIT_BUTTON' => "Log event"
+      ],
+     
+    'CMDLINE' => [
+       'VALIDCMDS' => "~|sign|del|conf|refresh|"  
+      ],    
+      
+    'HISTORY' => [
+     'MAX_ITEMS' => 1000
+      ]  
+    ];

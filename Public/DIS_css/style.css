@@ -1,0 +1,376 @@
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of Homolog.
+ *
+ * Homolog is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Homolog is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.  
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Homolog. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * style.css
+ * 
+ * CSS file.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2021, 2024, 5 Mode     
+ */
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0px; 
+  padding: 0px;
+  background-color:#ffffff;
+  color: #878080; 
+  font-family: Monospace, Verdana, Serif;
+}
+hr {
+  color:#000000; 
+  margin-top:30px;
+  border: 1px solid black;
+  width:90%
+}
+#call-sidebar {
+  position:absolute; 
+  top:0px; 
+  left:1px; 
+  clear:both; 
+  float:left; 
+  width:1.5%; 
+  max-width:5px; 
+  height:100%; 
+  min-height:1900px; 
+  text-align:center; 
+  border-right: 1px solid #2c2f34;
+  z-index:1;
+}
+#butCloseSplash {
+  position:relative; left:-10px;
+}
+#butHashMe {
+  position:relative; 
+  left:-2px; 
+  top:+5px; 
+  color:#000000; 
+  font-size:12px;
+}
+#content-bar {
+  width:100%;
+  float:left;
+}
+.data-date { 
+  font-size:12px; 
+  font-weight:900;
+  height:13px;
+  padding-left:5px;
+  padding-right:5px;  
+  padding-top:0px;
+  background: #FFFFFF;
+  color: black;
+}
+.data-desc {} 
+.data-time { 
+  font-size:12px; 
+  font-weight:900;
+  height:13px;
+  padding-left:5px;
+  padding-right:5px;  
+  padding-top:0px;
+  background: #FFFFFF;
+  color: black;
+}
+.data-title {
+  cursor:pointer;
+} 
+#date {
+  min-width:170px;
+  max-width:250px;
+  width:25%;
+}
+#desc {
+  width:55%;
+  max-width:630px;
+}
+#drop-img {
+  float:left;
+  margin-left:60px;
+  margin-top:0px;
+  width:229px;
+  height:223px; 
+  overflow:hidden;
+  border: 0px solid lightgray;
+}
+#fireupload {
+  height: 180px;
+  overflow:hidden;
+  cursor:pointer; 
+}
+.emptyfield{
+  border: 1px solid red;
+}
+.editemptyfield{
+  border-bottom: 3px dashed red;
+}
+#events {
+  clear:both;
+  margin:auto;
+  padding:20px;
+}
+.exerpt {
+  display:none;
+}
+#footerCont {
+  position: fixed; 
+  top: 2000px; 
+  left:-10px;
+  width: 102%; 
+  border: 1px solid #C2DBF2; 
+  padding: 7px; 
+  background: #ffffff; 
+  opacity: 0.3;
+  color:white; 
+  font-family: Arial,Sans,Verdana;
+  font-size: 12px; 
+  text-align: center; 
+  z-index: 99990;
+}
+#footer {
+  position: fixed;
+  float: right;
+  top: 2000px; 
+  left:-10px;
+  width: 100%; 
+  border: 0px solid #C2DBF2; 
+  padding: 7px; 
+  opacity: 1.0;
+  color:black; 
+  font-family: Arial,Sans,Verdana;
+  font-size: 12px; 
+  font-weight: 400;
+  text-align: right; 
+  z-index: 99991;
+}
+#footer2 {
+  font-size:23px;
+}
+#fullExerpt {
+  width:100%;
+  white-space:wrap;
+  text-align:left;
+  padding:30px;
+  padding-top:5px;
+}
+#genius {
+  position:relative; 
+  left:+1px; 
+  width:90%; 
+  border: 1px dashed #EEEEEE;
+}
+#guest-msg {
+  padding:30px;
+  font-size:23px;
+  margin-bottom:23px;
+  font-weight:900;
+}
+.header {
+  height: 65px;
+  background-color:#ffffff;
+  vertical-align: middle;
+  border-bottom: 0px solid #2c2f34;
+  padding: 8px;
+  z-index:90;
+}
+.header2 {
+  margin:0;
+  padding:0;
+  border-bottom:0px;
+  text-align:center;
+}
+#hour {
+  background-color:#FFFFFF;
+}
+#logo-hl {
+  position:relative;
+  top:-25px;
+  width:48px;
+  margin:5px;
+}
+#min {
+  background-color:#FFFFFF;
+}
+.my-modal-content {
+  float:left;
+  width:90%; 
+  height:500px;
+  margin-top:10%;
+}
+.my-modal-dialog {
+  width:80%;
+  background-color:#FFFFFF;
+}
+.my-modal-toolbox {
+  margin-top:10%;
+}
+#page-title {
+}
+#Password {
+  font-size:13px; 
+  width: 60%; 
+  border-radius:3px;
+}
+.res {
+  float: left;
+ /* width: 375px;*/
+  padding:25px;
+  height: 110px;
+  font-weight: 900;
+}
+.resli{
+  cursor:pointer;
+}
+#Salt {
+  position:relative; 
+  top:+5px; 
+  font-size:13px; 
+  width: 90%; 
+  border-radius:3px;
+}
+.search-control {
+  font-size:18px;
+  font-weight: 900;
+  color:black;
+  height: 43px;
+  padding-left:10px;
+  padding-right:10px;
+}
+#send {
+  position:relative;
+  top:+28px;
+  margin-top:25px;
+  height:50px;
+  background-color:red;
+  border:1px solid black;
+  color:white;
+  font-size:medium;
+}
+#sidebar {
+  position:absolute; 
+  left:6px; 
+  top:0px; 
+  clear:both; 
+  background-color:#FFFFFF; 
+  padding:8px; 
+  width:25%; 
+  max-width:250px; 
+  height:100%; 
+  text-align:center; 
+  border-right: 1px solid #2c2f34; 
+  display:none;
+  z-index:91;
+}
+.sidebarcontrol{
+  background:#393939; 
+  color:#ffffff;
+  font-family: Verdana, Arial, Helvetica Neue, Helbetica;
+}
+.standardcontrol{
+/*  border: 0px;
+  border-bottom: 1px dashed #EEEEEE;*/
+  color: #000000;
+  font-family: Verdana, Arial, Helvetica Neue, Helbetica;
+}
+#sidebar-close {
+  position:relative; 
+  left:-10px;
+}
+#splash {
+  position:relative; 
+  left:+3px; 
+  width:98%; 
+  background-color: #33aced; 
+  color:black; 
+  border-radius:20px; 
+  padding: 20px; 
+  margin-bottom:8px;
+}
+.table-event {
+  width:75%; 
+  border:0;
+}
+.td-admin {
+  width:10%; 
+  text-align:center;
+  padding-left:8px;
+  padding-top:2px
+}
+.td-data-date {
+  width:14%; 
+  text-align:left; 
+  vertical-align:top; 
+  padding-top:2px; 
+  padding-left:8px; 
+  white-space:nowrap;
+}
+.td-data-desc {
+  width:66%; 
+  text-align:left; 
+  vertical-align:top; 
+  padding-top:5px; 
+  padding-left:15px; 
+  font-size:18px;
+}
+.td-data-time {
+  width:10%; 
+  text-align:left; 
+  vertical-align:top; 
+  padding-top:2px; 
+  padding-left:8px; 
+  white-space:nowrap;
+}
+.td-data-title {
+  width:66%; 
+  text-align:left; 
+  vertical-align:top; 
+  padding-top:5px; 
+  padding-left:15px; 
+  font-size:18px;
+}
+#template-img {
+  float:left;
+  margin-left:120px;
+  margin-top:60px;
+  width:181px;
+  height:140px; 
+  overflow:hidden;
+  border: 0px solid lightgray;
+}
+#template-img:hover {
+  border-bottom: 8px solid #2ba5f4;
+  border-radius: 50%;
+}
+.this-title {
+  color:#FFFFFF;
+  background:black;
+}
+#welcome-msg {
+  clear:both;
+  width: 93%;
+  height: 50px;
+  font-size:23px;
+  margin-top:63px;
+  margin-bottom:23px;
+  margin-right:7%;
+  text-align:right; 
+  font-weight:900;
+  color:#000000;
+}

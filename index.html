@@ -1,0 +1,216 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+  <meta charset="UTF-8"/>
+  <meta name="style" content="day1"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+<!--
+    Copyright 2021, 2024 5 Mode
+
+    This file is part of DropInSound.
+
+    DropInSound is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    DropInSound is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with DropInSound. If not, see <https://www.gnu.org/licenses/>.
+ -->
+     
+  <title>DropInSound: let everyone log sound</title>
+	
+  <link rel="shortcut icon" href="/favicon.ico" />
+    
+  <meta name="description" content="Welcome to DropInSound"/>
+  <meta name="author" content="5 Mode"/> 
+  <meta name="keywords" content="sound,logger,list,on,premise,solution"/>
+  <meta name="robots" content="index,follow"/>
+  
+  <script src="/Public/DIS_js/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="/Public/DIS_js/common.js" type="text/javascript"></script>
+  <script src="/Public/DIS_js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/Public/DIS_js/sha.js" type="text/javascript"></script>
+  
+  <script src="/Public/DIS_js/index.js" type="text/javascript" defer></script>
+  
+  <link href="/Public/DIS_css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="/Public/DIS_css/style.css?r=123345543322" type="text/css" rel="stylesheet">
+
+  <script>
+  		  
+  function hideTitle() {
+    $("#myh1").hide("slow");
+  }
+  
+  function startApp() {
+    //$("#HCsplash").hide("slow");
+    $("#HCsplash").css("display","none");
+    $(document.body).css("background","#ffffff");
+	
+    //$("#originsDisplay").show();
+	  
+    $("#frmHC").show();
+  }			
+
+  function setOriginsPos() {
+    h=parseInt(window.innerHeight);
+    w=parseInt(window.innerWidth);
+    mytop = parseInt(window.innerHeight - ($("#originsDisplay").height() + 60));
+    $("#originsDisplay").css("top", mytop+"px");
+    setTimeout("hideOrigins()",15000);
+  }
+
+  function hideOrigins() {
+    $("#originsDisplay").css("visibility","hidden");
+  }  
+	  
+  window.addEventListener("load", function() {
+	
+    $("#frmHC").hide();
+    $(document.body).css("background","#000000");
+    $("#HCsplash").show("slow");	  
+    //setTimeout("hideTitle()", 2000);
+
+    setTimeout("setOriginsPos()", 500);	  
+	  
+    setTimeout("startApp()", 4000);
+
+  }, true);
+
+  </script>    
+       
+</head>
+<body>
+
+<div id="HCsplash" style="padding-top: 160px; text-align:center;color:#ffffff;display:none;">
+   <div id="myh1"><H1>DropIn</H1></div><br>
+   <img src="/Public/DIS_res/DIlogo.png" style="width:310px;">
+</div>
+
+<form id="frmHC" method="POST" target="_self" enctype="multipart/form-data" style="display:none;">
+
+<div class="header">
+   <a id="ahome" href="http://dropin.5mode-foss.eu" target="_blank" style="color:black; text-decoration: none;"><img id="logo-hl" src="/Public/DIS_res/DIlogo.png" style="width:32px;">&nbsp;Homolog</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="agithub" href="https://github.com/par7133/DropIn" style="color:#000000"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="afeedback" href="mailto:posta@elettronica.lol" style="color:#000000"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="asupport" href="tel:+39-378-0812391" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:black;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>
+</div>
+	
+<div style="clear:both; float:left; padding:8px; width:15%; height:700px; border-right: 1px solid #2c2f34; text-align:center;">
+	<div style="padding-left:10px;text-align: left;">
+	  <a href="https://github.com/par7133/DropIn/archive/refs/tags/v1.0.5.zip">Rel. 1.0.5 (zip)</a><br>
+	  <a href="https://github.com/par7133/DropIn/archive/refs/tags/v1.0.5.tar.gz">Rel. 1.0.5 (tar.gz)</a><br>
+	</div>  
+    <br><br>
+    <img src="/Public/DIS_res/HLgenius.png" alt="HL Genius" title="HL Genius" style="position:relative; left:+6px; width:90%; border: 1px dashed #EEEEEE;">
+    &nbsp;<br><br><br>
+    &nbsp;<input type="text" id="Password" name="Password" placeholder="password" style="font-size:10px; background:#393939; color:#ffffff; width: 90%; height:30px; border-radius:3px;" value="" autocomplete="off"><br>
+    &nbsp;<input type="text" id="Salt" placeholder="salt" style="position:relative; top:+5px; font-size:10px; background:#393939; color:#ffffff; width: 90%; height:30px; border-radius:3px;" autocomplete="off"><br>
+    &nbsp;<a href="#" onclick="showEncodedPassword();" style="position:relative; left:-2px; top:+5px; color:#000000; font-size:12px;">Hash Me!</a>
+    <br><br><br>
+</div>
+
+<div style="float:left; width:85%;height:100%; padding:8px;">
+	
+	<div id="splash" style="border-radius:20px; position:relative; left:+3px; width:98%; background-color: #f0f8fb; padding: 20px; margin-bottom:8px;">	
+	
+	   <button type="button" class="close" aria-label="Close" onclick="close-Splash();" style="position:relative; left:-10px;">
+        <span aria-hidden="true">&times;</span>
+     </button>
+	
+	   Hello and welcome to DropInSound!<br><br>
+	   
+	   DropInSound is a light and simple software on premise to log your own stuff in sound form.<br><br>
+	   
+	   DropInSound is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br><br>
+	   
+	   First step, use the left side panel password and salt fields to create the hash to insert in the config file. Remember to manually set there also the salt value.<br><br>
+	   
+	   As you are going to run DropInSound in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:<br>
+	   <ol>
+	   <li>Check the permissions of your "data" folder in your web app private path; and set its path in the config file.</li>
+	   <li>In the data path create a ".DI_history" and ".DI_captchahistory" files and give them the write permission.</li>
+     <li>Finish to setup the configuration file apporpriately, in the specific:</li>
+     <ul>
+       <li>Configure the APP_USE and APP_CONTEXT appropriately.</li>
+       <li>Configure the DISPLAY attributes as required.</li>
+       <li>Configure the max history items as required (default: 1000).</li>	      
+	   </ul>
+     </ol>
+	   
+	   <br>	
+     
+           <a href="/Public/res/screenshot1.png" target="_blank"><img src="/Public/res/screenshot1.png" style="width:230px;margin-top:7px;"></a>
+           
+           <br>
+
+	   Feedback: <a href="mailto:posta@elettronica.lol">posta@elettronica.lol</a>
+	
+	   <br><br><br><br><br>	
+		
+	</div>	
+  	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+	
+</div>
+
+<div id="originsDisplay" style="display:none;">
+      <br>
+       &nbsp;<span class="originLabel">Coding:</span>&nbsp;Italy<br>         
+       &nbsp;<span class="originLabel">Server:</span>&nbsp;United States&nbsp;<br>
+       &nbsp;<span class="originLabel"><a href="http://metrica.yandex.com" class="bbb">Metrics</a>:</span>&nbsp;Russia&nbsp;<br>
+      <br>
+</div>   	
+	
+<div class="footer">
+<div id="footerCont">&nbsp;</div>
+<div id="footer"><span style="background:#E1E1E1;color:black;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;<a href="https://5mode.com/dd.html">Disclaimer</a>&nbsp;&nbsp;A <a href="http://5mode.com">5 Mode</a> project and <a href="http://demo.5mode.com">WYSIWYG</a> system. CC&nbsp;&nbsp;</span></div>	
+</div>
+
+</form>
+
+<script>
+  
+function setFooterPos2() {
+  if (document.getElementById("footerCont")) {
+    //if ($("#Password").val() === "") {  
+    //    tollerance = 48;
+    //  } else {
+    //  tollerance = 15;
+    //}
+    tollerance = 22;  	  
+    $("#footerCont").css("top", parseInt( window.innerHeight - $("#footerCont").height() - tollerance ) + "px");
+    $("#footer").css("top", parseInt( window.innerHeight - $("#footer").height() - tollerance + 6) + "px");
+  }
+}
+
+window.addEventListener("load", function() {
+    
+  setTimeout("setFooterPos2()", 4000);
+
+}, true);
+  
+window.addEventListener("resize", function() {
+    
+  setTimeout("setFooterPos2()", 4000);
+
+}, true);
+
+</script>  
+
+</body>	 
+</html>	 
+

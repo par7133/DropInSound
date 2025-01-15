@@ -163,7 +163,7 @@ $("#send").on("click",function() {
 
 function setContentPos() {
   if (window.innerWidth<650) {
-    $("#ahome").attr("href","/");
+    //$("#ahome").attr("href","/");
     $("#agithub").css("display","none");
     $("#afeedback").css("display","none");
     $("#asupport").css("display","none");
@@ -175,7 +175,7 @@ function setContentPos() {
     $("#template-img").hide();
     $(".dragover").css("min-width", "450px");
   } else {  
-    $("#ahome").attr("href","http://dropin.5mode-foss.eu");
+    //$("#ahome").attr("href","http://dropinsound.5mode-foss.eu");
     $("#agithub").css("display","inline");
     $("#afeedback").css("display","inline");
     $("#asupport").css("display","inline");  

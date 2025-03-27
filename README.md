@@ -19,9 +19,9 @@ As you are going to run DropInSound in the PHP process context, using a limited 
  <li>Configure the max history items as required (default: 1000).</li>	      
 </ul>
 </ol>
-   
-Feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@elettronica.lol</a>
-  	   
+	   
 ## Screenshots  
 	   
  ![DropInSound in action](/Public/DIS_res/screenshot1.png)
+
+Feedback: <a href="mailto:code@gaox.io" style="color:#e6d236;">code@gaox.io</a>
